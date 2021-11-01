@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Mail from './Components/Mail';
+import UserProfile from './Components/UserProfile';
+{/*import Mail from './Components/Mail';
 import Counter from './Components/Counter';
 import Chrono from './Components/Chrono';
 import UserProfilCard from './Components/UserProfilCard';
@@ -8,28 +9,46 @@ import Shop from './Components/Shop';
 import Button1 from './Components/Button1';
 import BookDetails from './Components/BookDetails';
 import SnackBar from './Components/SnackBar';
-import Tabs from './Components/Tabs';
+import Tabs from './Components/Tabs';*/}
+
 
 
 function App() {
-  
-  const tabsLabel = [
+//***** Déclarationde variable */
+//Exo tabs  
+{/*}  const tabsLabel = [
     {id: 1, label: 'The Pacific Crest Trail (US)'},
     {id: 2, label: 'The Great Divide Trail (Canada)'},
     {id: 3, label: 'Camino de Santiago (Spain)'}
-  ];
-
+  ];*/}
+//Exo ProfilType
+const user = {
+  firstname: 'John',
+  //lastname: 'Kunkel',
+  location: {
+ //   country: 'United States',
+  //city:'Atlanta'
+  },
+  age: 49,
+  picture: 'HarveyPicture',
+  interests: [
+    'Cinematic FPV drone',
+    'Hiking',
+    'Music'
+  ]
+};
+//**** Code JSX */
   return (
     <div className="App">
-      <Mail/>
+      {/*<Mail/>
       <p><Counter/></p>
       <p><Chrono/></p>
-      {/*<p><UserProfilCard
+      <p><UserProfilCard
       age = "28"
       name = "Hannah"
       city = "San Diego"
       imageSrc= "https://cdn.pixabay.com/photo/2020/04/26/09/07/bird-5094334__340.jpg"
-      /></p>*/}
+      /></p>
       <p><Shop shopP="produit"/></p>
       <p><Button1 label='Click on me' disabled = {true} 
       backgroundColor = 'yellow' color = 'white' isRounded = {true}/></p>
@@ -53,7 +72,8 @@ function App() {
              <p> paragraphe 3ème onglet</p>
            </div>
          </Tabs>
-       </div> 
+       </div>*/} 
+       <UserProfile user={user} />
     </div>
   );
 }
